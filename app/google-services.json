@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "444979408684",
+    "firebase_url": "https://btpandroid-ff5c7.firebaseio.com",
+    "project_id": "btpandroid-ff5c7",
+    "storage_bucket": "btpandroid-ff5c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:444979408684:android:e6b94d4b5222b5c2",
+        "android_client_info": {
+          "package_name": "com.example.android.btp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "444979408684-ijt15kvg4s7pjv8lupcn794mueq9vv9q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDrJShjLzKAn1FSy9yGSaIq8pjMbHthgLc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
