@@ -67,4 +67,13 @@
     <string name="action_logout">Logout</string>
     <string name="action_mark_all_read">Mark All as Read</string>
     <string name="privacy_policy">Privacy Policy</string>
+
+    <string name="opA">We analyze available algorithms to find and implement the best suitable algorithm.</string>
+    <string name="opB">For the sake of finding time complexities</string>
+    <string name="opC">For building knowledge about the given algorithms</string>
+    <string name="opD">It is not necessary to do algorithm analysis</string>
+    <string name="hint">Hint</string>
+    <string name="sol">Solution</string>
+    <string name="ans">Answer</string>
+    <string name="question_no">Question</string>
 </resources>

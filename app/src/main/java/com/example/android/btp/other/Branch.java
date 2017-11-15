@@ -14,7 +14,7 @@ public class Branch {
     public String department;
     public String subject;
     public String id;
-    public String level,question,optionA,optionB,optionC,optionD,hint,solution,answer;
+    public String field1,field2,field3,field4,field5,field6,field7,field8,field9;
     public Map<String,String> hm=new HashMap<>();
     public Branch(){
 
@@ -23,15 +23,15 @@ public class Branch {
         this.department=department;
         this.subject=subject;
         this.id=id;
-        this.level=level;
-        this.question=question;
-        this.optionA=optionA;
-        this.optionB=optionB;
-        this.optionC=optionC;
-        this.optionD=optionD;
-        this.hint=hint;
-        this.solution=solution;
-        this.answer=answer;
+        this.field1=level;
+        this.field2=question;
+        this.field3=optionA;
+        this.field4=optionB;
+        this.field5=optionC;
+        this.field6=optionD;
+        this.field7=hint;
+        this.field8=solution;
+        this.field9=answer;
     }
 
     public Map<String, Object> toMap() {
@@ -39,19 +39,57 @@ public class Branch {
         result.put("department", department);
         result.put("subject", subject);
         result.put("id", id);
-        result.put("level", level);
-        result.put("question", question);
-        result.put("optionA", optionA);
-        result.put("optionB", optionB);
-        result.put("optionC", optionC);
-        result.put("optionD", optionD);
-        result.put("hint", hint);
-        result.put("solution", solution);
-        result.put("answer", answer);
+        result.put("level", field1);
+        result.put("question", field2);
+        result.put("optionA", field3);
+        result.put("optionB", field4);
+        result.put("optionC", field5);
+        result.put("optionD", field6);
+        result.put("hint", field7);
+        result.put("solution", field8);
+        result.put("answer", field9);
 
 
         return result;
     }
 
+    public String getDepartment() {
+        return department;
+    }
 
+    public String getField1() {
+        return field1;
+    }
+
+    public String getField2() {
+        return field2;
+    }
+
+    public String getField3() {
+        return field3;
+    }
+
+    public String getField4() {
+        return field4;
+    }
+
+    public String getField5() {
+        return field5;
+    }
+
+    public String getField6() {
+        return field6;
+    }
+
+    public String getField7() {
+        return field7;
+    }
+
+    public String getField8() {
+        return field8;
+    }
+
+    public String getField9() {
+        return field9;
+    }
 }

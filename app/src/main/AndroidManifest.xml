@@ -21,6 +21,9 @@
         <activity android:name=".activity.LoginActivity"></activity>
         <activity android:name=".activity.SignupActivity"></activity>
         <activity android:name=".activity.ResetPasswordActivity"></activity>
+        <activity android:name=".activity.LevelListActivity"></activity>
+        <activity android:name=".activity.QuestionListActivity"></activity>
+
         <activity
             android:name=".activity.EngineeringActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
