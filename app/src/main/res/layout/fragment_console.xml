@@ -28,33 +28,43 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+            <!--<android.support.design.widget.TextInputLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content">-->
 
-                <EditText
-                    android:id="@+id/csubject"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Subject"
-                    android:inputType="textCapWords"
-                    android:maxLines="1" />
+                <!--<EditText-->
+                    <!--android:id="@+id/csubject"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:hint="Subject"-->
+                    <!--android:inputType="textCapWords"-->
+                    <!--android:maxLines="1" />-->
 
-            </android.support.design.widget.TextInputLayout>
+            <!--</android.support.design.widget.TextInputLayout>-->
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Subject:"
+                android:layout_marginBottom="5dp"/>
+            <Spinner
+                android:id="@+id/csubject"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Subject"/>
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
 
-                <EditText
-                    android:id="@+id/clevel"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Level"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1" />
-
-            </android.support.design.widget.TextInputLayout>
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:text="Subject:"
+                android:layout_marginBottom="5dp"/>
+            <Spinner
+                android:id="@+id/clevel"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:hint="Level"/>
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"

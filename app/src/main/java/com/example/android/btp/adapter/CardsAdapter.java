@@ -74,13 +74,13 @@ public class CardsAdapter extends RecyclerView.Adapter<CardsAdapter.MyViewHolder
             public void onClick(View view) {
             if(context!=null) {
                 Toast.makeText(fragment.getActivity(), holder.title.getText(), Toast.LENGTH_SHORT).show();
-//                if(holder.title.getText().equals("Articles")){
-////                    Intent intent=new Intent().setClass(mContext,com.example.android.btp.activity.ArticlesActivity.class);
-//                    Intent intent=new Intent(fragment.getActivity(), ArticlesActivity.class);
+                if(holder.title.getText().equals("Articles")){
+//                    Intent intent=new Intent().setClass(mContext,com.example.android.btp.activity.ArticlesActivity.class);
+                    Intent intent=new Intent(fragment.getActivity(), ArticlesActivity.class);
 //                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                    fragment.getActivity().startActivity(intent);
-//                    fragment.getActivity().getFragmentManager().popBackStack();
-//                }
+                    fragment.getActivity().startActivity(intent);
+                    fragment.getActivity().getFragmentManager().popBackStack();
+                }
                 if (holder.title.getText().equals("Engineering")) {
                     Intent intent = new Intent(context, EngineeringActivity.class);
 //                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

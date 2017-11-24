@@ -28,6 +28,9 @@
             android:name=".activity.EngineeringActivity"
             android:theme="@style/AppTheme.NoActionBar"></activity>
         <activity
+            android:name=".activity.ArticlesActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
             android:name=".activity.HomePageActivity"
             android:label="@string/title_activity_home_page"
             android:theme="@style/AppTheme.NoActionBar"></activity>
