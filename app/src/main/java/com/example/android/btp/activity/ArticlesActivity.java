@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -55,14 +56,20 @@ public class ArticlesActivity extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         geometricProgressView.setVisibility(View.VISIBLE);
+
+
+
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 geometricProgressView.setVisibility(View.GONE);
+                int count=0;
                 for (DataSnapshot key : dataSnapshot.getChildren()) {
+                    count++;
+                    if(count==20)break;
                     Article currentArticle = key.getValue(Article.class);
                     articleList.add(currentArticle);
-                    viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
+                    viewPager.setAdapter(new MyPagerAdapter(getSupportFragmentManager(),articleList));
                     viewPager.setOffscreenPageLimit(articleList.size());
                 }
 //                Toast.makeText(getApplicationContext(),articleList.size(),Toast.LENGTH_SHORT).show();
@@ -75,31 +82,33 @@ public class ArticlesActivity extends AppCompatActivity {
             }
         });
 
-//        new Handler().postDelayed(new Runnable(){
-//            @Override
-//            public void run() {
-//
-//            }
-//        }, 9000);
+
+
+
+
 
 
     }
 
-    private class MyPagerAdapter extends FragmentPagerAdapter{
-        public MyPagerAdapter(FragmentManager fm){
+    private class MyPagerAdapter extends FragmentStatePagerAdapter {
+        private List<Article> articleList = new ArrayList<>();
+
+        MyPagerAdapter(FragmentManager fm, List<Article> articleList) {
             super(fm);
+            this.articleList = articleList;
         }
 
         @Override
-        public Fragment getItem(int pos){
-            return ArticlesFragment.newInstance(pos,articleList);
+        public Fragment getItem(int position) {
+            return ArticlesFragment.newInstance((position), articleList);
         }
 
         @Override
-        public int getCount(){
-            return 150;
+        public int getCount() {
+            return articleList.size();
         }
     }
+
 
 
 }

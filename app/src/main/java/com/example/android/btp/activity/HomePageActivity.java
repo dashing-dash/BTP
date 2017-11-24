@@ -217,8 +217,15 @@ public class HomePageActivity extends AppCompatActivity{
                 HomeFragment homeFragment=new HomeFragment();
                 return homeFragment;
             case 1:
-                NotificationsFragment notificationFragment=new NotificationsFragment();
-                return notificationFragment;
+                if(!auth.getCurrentUser().getEmail().toString().equals("admin@gmail.com")){
+                    Toast.makeText(getApplicationContext(),"Login as admin first",Toast.LENGTH_SHORT).show();
+                    HomeFragment homeFragment1=new HomeFragment();
+                    return homeFragment1;
+                }
+                else {
+                    NotificationsFragment notificationFragment = new NotificationsFragment();
+                    return notificationFragment;
+                }
             case 2:
                 SettingsFragment settingsFragment=new SettingsFragment();
                 return settingsFragment;

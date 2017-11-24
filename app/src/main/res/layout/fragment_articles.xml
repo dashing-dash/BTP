@@ -12,14 +12,19 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="84dp"
+        android:layout_marginBottom="60dp"
+        android:textSize="35dp"
+        android:clickable="true"
+        android:textColor="#00bcd4"
         android:text="TextView" />
 
     <EditText
         android:id="@+id/articleContent"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:ems="10"
+        android:focusable="false"
         android:inputType="textMultiLine" />
 </RelativeLayout>
