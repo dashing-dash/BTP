@@ -17,6 +17,7 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
 }
 
 dependencies {
@@ -38,6 +39,7 @@ dependencies {
     compile 'com.github.bumptech.glide:glide:3.7.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'net.bohush.geometricprogressview:geometricprogressview:1.1.1'
+    compile 'com.an.customfontview:customfont:0.1.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

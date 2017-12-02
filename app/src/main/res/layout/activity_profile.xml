@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="10dp"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/prof_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.an.customfontview.CustomTextView
+            android:id="@+id/user_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="UserId"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:textFontPath="fonts/CaviarDreams.ttf"
+            tools:ignore="RelativeOverlap" />
+
+        <com.an.customfontview.CustomTextView
+            android:id="@+id/tv_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:textFontPath="fonts/CaviarDreams.ttf"
+            tools:ignore="RelativeOverlap" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prof_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/prof_id">
+
+        <com.an.customfontview.CustomTextView
+            android:id="@+id/email_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Email id"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:textFontPath="fonts/CaviarDreams.ttf"
+            tools:ignore="RelativeOverlap" />
+
+        <com.an.customfontview.CustomTextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:textFontPath="fonts/CaviarDreams.ttf"
+            tools:ignore="RelativeOverlap" />
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listview_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/prof_email"
+        android:layout_marginHorizontal="5dp"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="10.0sp"
+         />
+
+    <net.bohush.geometricprogressview.GeometricProgressView
+        android:id="@+id/geometric_progress_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:gp_color="@android:color/holo_red_light"
+        app:gp_duration="800"
+        app:gp_figure_padding="8dp"
+        app:gp_number_of_angles="10"
+        app:gp_type="triangle" />
+
+</RelativeLayout>

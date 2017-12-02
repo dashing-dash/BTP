@@ -94,7 +94,14 @@ public class HomePageActivity extends AppCompatActivity{
         txtWebsite = (TextView) navHeader.findViewById(R.id.website);
         imgNavHeaderBg = (ImageView) navHeader.findViewById(R.id.img_header_bg);
         imgProfile = (ImageView) navHeader.findViewById(R.id.img_profile);
-
+        imgProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent profileIntent=new Intent(HomePageActivity.this,ProfileActivity.class);
+                startActivity(profileIntent);
+//                finish();
+            }
+        });
         activityTitles=getResources().getStringArray(R.array.nav_item_activity_titles);
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -217,7 +224,7 @@ public class HomePageActivity extends AppCompatActivity{
                 HomeFragment homeFragment=new HomeFragment();
                 return homeFragment;
             case 1:
-                if(!auth.getCurrentUser().getEmail().toString().equals("admin@gmail.com")){
+                if(!auth.getCurrentUser().getEmail().toString().equals("adminuser1@gmail.com")){
                     Toast.makeText(getApplicationContext(),"Login as admin first",Toast.LENGTH_SHORT).show();
                     HomeFragment homeFragment1=new HomeFragment();
                     return homeFragment1;
