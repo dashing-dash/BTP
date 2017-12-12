@@ -1,25 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#FEA600"
     >
 
+    <TextView
+        android:id="@+id/textiew_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Smart Learning"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="30sp" />
+
+
     <ImageView
-        android:id="@+id/imgLogo"
+        android:id="@+id/image_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:src="@drawable/istudy2" />
+        android:src="@drawable/smartlogo"
+        tools:ignore="ContentDescription" />
 
     <TextView
-        android:layout_width="fill_parent"
+        android:id="@+id/textview_caption"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:textSize="12dp"
-        android:textColor="#454545"
-        android:gravity="center_horizontal"
         android:layout_alignParentBottom="true"
-        android:text="BTP" />
+        android:layout_marginBottom="70dp"
+        android:text="Making Learning Easy"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="20sp" />
 
 </RelativeLayout>

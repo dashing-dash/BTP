@@ -52,7 +52,7 @@ public class HomePageActivity extends AppCompatActivity{
     private TextView txtName, txtWebsite;
     private Toolbar toolbar;
     private static final String TAG = "MyActivity";
-    private FloatingActionButton fab;
+//    private FloatingActionButton fab;
     private FirebaseAuth auth;
     FirebaseDatabase database=FirebaseDatabase.getInstance();
     private DatabaseReference databaseReference;
@@ -87,7 +87,7 @@ public class HomePageActivity extends AppCompatActivity{
 
         drawer=(DrawerLayout)findViewById(R.id.drawer_layout);
         navigationView=(NavigationView)findViewById(R.id.nav_view);
-        fab=(FloatingActionButton)findViewById(R.id.fab);
+//        fab=(FloatingActionButton)findViewById(R.id.fab);
 
         navHeader = navigationView.getHeaderView(0);
         txtName = (TextView) navHeader.findViewById(R.id.name);
@@ -104,12 +104,12 @@ public class HomePageActivity extends AppCompatActivity{
         });
         activityTitles=getResources().getStringArray(R.array.nav_item_activity_titles);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Some action performed",Toast.LENGTH_SHORT).show();
-            }
-        });
+//        fab.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Toast.makeText(getApplicationContext(),"Some action performed",Toast.LENGTH_SHORT).show();
+//            }
+//        });
 
 
 //        databaseReference = FirebaseDatabase.getInstance().getReference("Topics");
@@ -182,8 +182,8 @@ public class HomePageActivity extends AppCompatActivity{
             drawer.closeDrawers();
 
             // show or hide the fab button
-            toggleFab();
-            return;
+//            toggleFab();
+//            return;
         }
         // Sometimes, when fragment has huge data, screen seems hanging
         // when switching between navigation menus
@@ -208,7 +208,7 @@ public class HomePageActivity extends AppCompatActivity{
         }
 
         // show or hide the fab button
-        toggleFab();
+//        toggleFab();
 
         //Closing drawer on item click
         drawer.closeDrawers();
@@ -224,14 +224,15 @@ public class HomePageActivity extends AppCompatActivity{
                 HomeFragment homeFragment=new HomeFragment();
                 return homeFragment;
             case 1:
-                if(!auth.getCurrentUser().getEmail().toString().equals("adminuser1@gmail.com")){
+                if(auth.getCurrentUser().getEmail().toString().equals("adminuser1@gmail.com")  || auth.getCurrentUser().getEmail().toString().equals("adminuser2.gmail.com") ){
+                    NotificationsFragment notificationFragment = new NotificationsFragment();
+                    return notificationFragment;
+                }
+                else {
+
                     Toast.makeText(getApplicationContext(),"Login as admin first",Toast.LENGTH_SHORT).show();
                     HomeFragment homeFragment1=new HomeFragment();
                     return homeFragment1;
-                }
-                else {
-                    NotificationsFragment notificationFragment = new NotificationsFragment();
-                    return notificationFragment;
                 }
             case 2:
                 SettingsFragment settingsFragment=new SettingsFragment();
@@ -270,7 +271,7 @@ public class HomePageActivity extends AppCompatActivity{
                         Toast.makeText(getApplicationContext(),"about us page will be displayed",Toast.LENGTH_SHORT).show();
                         drawer.closeDrawers();
                         return true;
-                    case R.id.action_logout:
+                    case R.id.logout:
                         auth=FirebaseAuth.getInstance();
                         auth.signOut();
                         startActivity(new Intent(HomePageActivity.this, LoginActivity.class));
@@ -399,11 +400,11 @@ public class HomePageActivity extends AppCompatActivity{
         return super.onOptionsItemSelected(item);
     }
 
-    private void toggleFab() {
-        if (navItemIndex == 0)
-            fab.show();
-        else
-            fab.hide();
-    }
+//    private void toggleFab() {
+//        if (navItemIndex == 0)
+//            fab.show();
+//        else
+//            fab.hide();
+//    }
 
 }

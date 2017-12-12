@@ -116,8 +116,8 @@ public class HomeFragment extends Fragment {
         a = new Categories("Engineering", covers[1]);
         categoryList.add(a);
 
-        a = new Categories("Quizzes", covers[2]);
-        categoryList.add(a);
+//        a = new Categories("Quizzes", covers[2]);
+//        categoryList.add(a);
 
         a = new Categories("Coding Problems", covers[3]);
         categoryList.add(a);
@@ -125,14 +125,14 @@ public class HomeFragment extends Fragment {
         a = new Categories("General Knowledge", covers[4]);
         categoryList.add(a);
 
-        a = new Categories("School", covers[5]);
-        categoryList.add(a);
-
-        a = new Categories("Around the world", covers[6]);
-        categoryList.add(a);
-
-        a = new Categories("Random", covers[7]);
-        categoryList.add(a);
+//        a = new Categories("School", covers[5]);
+//        categoryList.add(a);
+//
+//        a = new Categories("Around the world", covers[6]);
+//        categoryList.add(a);
+//
+//        a = new Categories("Random", covers[7]);
+//        categoryList.add(a);
 
         a = new Categories("Coming Soon",  covers[8]);
         categoryList.add(a);
